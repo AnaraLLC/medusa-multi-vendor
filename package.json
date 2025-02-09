@@ -25,7 +25,6 @@
     "medusa-v2"
   ],
   "scripts": {
-    "postinstall": "node patch-admin.js",
     "build": "medusa plugin:build",
     "dev": "medusa plugin:develop",
     "prepublishOnly": "medusa plugin:build"
