@@ -1,12 +1,19 @@
 {
   "name": "@anara/multi-vendor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A starter for Medusa plugins.",
   "author": "Medusa (https://medusajs.com)",
   "license": "MIT",
   "files": [
     ".medusa/server"
   ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./workflows": "./.medusa/server/src/workflows/index.js",
+    "./modules/*": "./.medusa/server/src/modules/*/index.js",
+    "./providers/*": "./.medusa/server/src/providers/*/index.js",
+    "./*": "./.medusa/server/src/*.js"
+  },
   "keywords": [
     "medusa",
     "plugin",
@@ -15,6 +22,7 @@
     "medusa-v2"
   ],
   "scripts": {
+    "postinstall": "node patch-admin.js",
     "build": "medusa plugin:build",
     "dev": "medusa plugin:develop",
     "prepublishOnly": "medusa plugin:build"

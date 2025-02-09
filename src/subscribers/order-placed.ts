@@ -10,8 +10,8 @@ import {
 } from "@medusajs/framework/utils";
 import { Modules } from "@medusajs/framework/utils";
 import productStoreLink from "../links/product-store";
-import { linkOrderToStoreWorkflow } from "src/workflows/link-order-to-store";
-import { createOrderPaymentCollectionAutorizedWorkflow } from "src/workflows/create-order-payment-collection-autorized";
+import { linkOrderToStoreWorkflow } from "../workflows/link-order-to-store";
+import { createOrderPaymentCollectionAutorizedWorkflow } from "../workflows/create-order-payment-collection-autorized";
 
 export default async function orderPlacedHandler({
   event: { data },
