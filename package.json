@@ -5,7 +5,10 @@
   "author": "Medusa (https://medusajs.com)",
   "license": "MIT",
   "files": [
-    ".medusa/server"
+    ".medusa/server",
+    "patch-admin.js",
+    "src/",
+    "package.json"
   ],
   "exports": {
     "./package.json": "./package.json",
